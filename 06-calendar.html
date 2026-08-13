@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rebone ワイヤーフレーム｜カレンダー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+
+<div class="screen">
+
+  <div class="head-tab">
+    <span class="t">カレンダー</span>
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- 今月の目標／やること -->
+  <div class="goals">
+    <div class="goal">
+      <p class="k">7月の目標 <i class="fa-solid fa-pen"></i></p>
+      <p>月末に、変化を感じられるように</p>
+    </div>
+    <div class="goal">
+      <p class="k">7月にやること <i class="fa-solid fa-pen"></i></p>
+      <p>ネジ締めを、5回以上やる</p>
+    </div>
+  </div>
+
+  <!-- 月間カレンダー -->
+  <div class="cal">
+
+    <div class="cal-head">
+      <i class="fa-solid fa-chevron-left"></i>
+      <span class="m">2026年 7月</span>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+
+    <div class="cal-dow">
+      <span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span><span>日</span>
+    </div>
+
+    <div class="cal-grid">
+
+      <!-- 第1週 -->
+      <div class="cell is-out"><span class="d">0</span></div>
+      <div class="cell is-out"><span class="d">0</span></div>
+      <div class="cell"><span class="d">1</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-live)">L</span></span></div>
+      <div class="cell"><span class="d">2</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kotsuban)">骨盤</span></span></div>
+      <div class="cell"><span class="d">3</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-waki)">わき</span></span></div>
+      <div class="cell"><span class="d">4</span></div>
+      <div class="cell"><span class="d">5</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kotsuban)">骨盤</span></span></div>
+
+      <!-- 第2週 -->
+      <div class="cell"><span class="d">6</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kata)">肩</span></span></div>
+      <div class="cell"><span class="d">7</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-daitenshi)">大転子</span></span></div>
+      <div class="cell"><span class="d">8</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-live)">L</span></span></div>
+      <div class="cell"><span class="d">9</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kotsuban)">骨盤</span></span></div>
+      <div class="cell"><span class="d">10</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-waki)">わき</span></span></div>
+      <div class="cell"><span class="d">11</span></div>
+      <div class="cell"><span class="d">12</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-daitenshi)">大転子</span></span></div>
+
+      <!-- 第3週 -->
+      <div class="cell"><span class="d">13</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kotsuban)">骨盤</span><span class="n">2</span></span></div>
+      <div class="cell"><span class="d">14</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kata)">肩</span></span></div>
+      <div class="cell"><span class="d">15</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-live)">L</span></span></div>
+      <div class="cell"><span class="d">16</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-waki)">わき</span></span></div>
+      <div class="cell"><span class="d">17</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-sw)">SW</span></span></div>
+      <div class="cell"><span class="d">18</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kotsuban)">骨盤</span></span></div>
+      <div class="cell"><span class="d">19</span></div>
+
+      <!-- 第4週 -->
+      <div class="cell"><span class="d">20</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-daitenshi)">大転子</span></span></div>
+      <div class="cell is-sel"><span class="d">21</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-sw)">SW</span><span class="n">2</span></span></div>
+      <div class="cell is-today"><span class="d">22</span><span class="stamp-wrap"><span class="stamp" style="background:var(--c-kotsuban)">骨盤</span></span><span class="tl">今日</span></div>
+      <div class="cell is-future"><span class="d">23</span></div>
+      <div class="cell is-future"><span class="d">24</span></div>
+      <div class="cell is-future"><span class="d">25</span></div>
+      <div class="cell is-future"><span class="d">26</span></div>
+
+      <!-- 第5週 -->
+      <div class="cell is-future"><span class="d">27</span></div>
+      <div class="cell is-future"><span class="d">28</span></div>
+      <div class="cell is-future"><span class="d">29</span></div>
+      <div class="cell is-future"><span class="d">30</span></div>
+      <div class="cell is-future"><span class="d">31</span></div>
+      <div class="cell is-out"><span class="d">0</span></div>
+      <div class="cell is-out"><span class="d">0</span></div>
+
+    </div>
+
+    <p class="sec-note cal-note">レッスンを受けると、色が自動でつきます。ご自分で記録する必要は、ありません。</p>
+
+  </div>
+
+  <!-- その日のレッスン（日付をタップすると、ここが開きます） -->
+  <div class="day-detail">
+    <div class="box">
+      <div class="dh">
+        <p class="dt">7月21日（火）に受けたレッスン</p>
+        <p class="dc">2本</p>
+      </div>
+      <ul>
+        <li>
+          <div class="ph"><i class="fa-regular fa-circle-play"></i></div>
+          <div class="body">
+            <p class="t">Switch Lab 第4回／わきのスイッチ</p>
+            <p class="m"><span class="dot" style="background:var(--c-sw)"></span>Switch Lab ／ 16分</p>
+          </div>
+          <i class="fa-solid fa-chevron-right chev" style="color:var(--text-sub)"></i>
+        </li>
+        <li>
+          <div class="ph"><i class="fa-regular fa-circle-play"></i></div>
+          <div class="body">
+            <p class="t">肩まわりを、ゆるめる</p>
+            <p class="m"><span class="dot" style="background:var(--c-kata)"></span>今日の1本 ／ 14分</p>
+          </div>
+          <i class="fa-solid fa-chevron-right chev" style="color:var(--text-sub)"></i>
+        </li>
+      </ul>
+    </div>
+    <p class="sec-note" style="margin-top:12px">タップすると、その日に受けたレッスンが出ます。そのまま、動画をもう一度みられます。</p>
+  </div>
+
+  <!-- 今月の積み上げ -->
+  <div class="sec">
+    <p class="sec-title">7月の、積み上げ</p>
+    <div class="stack">
+      <ul>
+        <li><p class="num">19</p><p class="lbl">できた日</p></li>
+        <li><p class="num">21</p><p class="lbl">受けたレッスン</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 色のルール -->
+  <div class="deco">
+    <div class="box">
+
+      <div class="rowhead">
+        <p class="t">色のルール</p>
+      </div>
+
+      <div class="chips">
+        <div class="chip"><div class="sw" style="background:var(--c-kotsuban)"></div><p class="nm">骨盤</p></div>
+        <div class="chip"><div class="sw" style="background:var(--c-waki)"></div><p class="nm">わき</p></div>
+        <div class="chip"><div class="sw" style="background:var(--c-kata)"></div><p class="nm">肩</p></div>
+        <div class="chip"><div class="sw" style="background:var(--c-daitenshi)"></div><p class="nm">大転子</p></div>
+        <div class="chip"><div class="sw" style="background:var(--c-live)"></div><p class="nm">ライブ</p></div>
+        <div class="chip"><div class="sw" style="background:var(--c-sw)"></div><p class="nm">Switch Lab</p></div>
+        <div class="chip is-undef"><div class="sw">？</div><p class="nm">未定</p></div>
+        <div class="chip is-undef"><div class="sw">？</div><p class="nm">未定</p></div>
+        <div class="chip is-undef"><div class="sw">？</div><p class="nm">未定</p></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- シェア -->
+  <div class="sec">
+    <a href="07-share.html" class="btn"><i class="fa-solid fa-arrow-down"></i>コツコツカレンダーを、ダウンロードする</a>
+  </div>
+
+  <div class="nav">
+    <a href="01-home.html"><i class="fa-solid fa-house"></i>ホーム</a>
+    <div><i class="fa-solid fa-magnifying-glass"></i>さがす</div>
+    <div><i class="fa-regular fa-circle-play"></i>ライブ</div>
+    <div class="on"><i class="fa-regular fa-square-check"></i>きろく</div>
+    <div><i class="fa-regular fa-user"></i>マイページ</div>
+  </div>
+
+</div>
+
+</body>
+</html>
