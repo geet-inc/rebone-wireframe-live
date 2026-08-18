@@ -719,7 +719,8 @@ a { color: inherit; text-decoration: none; }
 .jsum span { font-size: 10px; color: var(--text-sub); }
 
 .jgrid { padding: 0 20px; margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.jgrid a { border: 1px solid var(--border); border-radius: 3px; padding: 14px 13px 15px; }
-.jgrid .m { font-size: 15px; font-weight: 500; line-height: 1.5; }
+.jgrid a { border: 1px solid var(--border); border-radius: 3px; padding: 13px 13px 15px; }
+.jgrid .e { font-size: 17px; line-height: 1.4; }
+.jgrid .m { font-size: 15px; font-weight: 500; line-height: 1.5; margin-top: 2px; }
 .jgrid .s { font-size: 11px; color: var(--text-sub); line-height: 1.6; }
 .jgrid .is-now { border-color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }
