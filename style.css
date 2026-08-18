@@ -287,64 +287,6 @@ a { color: inherit; text-decoration: none; }
 .folder .fdone i { font-size: 10px; margin-right: 4px; }
 
 /* ================================================
-   テーマの中身
-   ================================================ */
-.detail-hero { padding: 0 20px; margin-top: 32px; }
-.detail-hero h2 { font-size: 24px; font-weight: 700; line-height: 1.45; }
-.detail-hero .spec { font-size: 12px; color: var(--text-sub); margin-top: 10px; }
-.detail-hero p.lead { font-size: 13px; line-height: 1.9; margin-top: 16px; }
-.detail-hero .ph { aspect-ratio: 16 / 9; margin-top: 20px; }
-
-/* めやす */
-.facts { padding: 0 20px; margin-top: 44px; }
-.facts ul { margin-top: 6px; }
-.facts li {
-  display: flex;
-  gap: 16px;
-  padding: 13px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-}
-.facts li:first-child { border-top: 1px solid var(--border); }
-.facts .k { flex: 0 0 92px; color: var(--text-sub); font-size: 12px; }
-.facts .v { flex: 1; }
-
-/* 週の一覧 */
-.weeks { margin-top: 44px; }
-.weeks .sec-head { padding: 0 20px; }
-.weeks ul { margin-top: 14px; }
-.weeks li {
-  padding: 15px 20px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.weeks li:last-child { border-bottom: 1px solid var(--border); }
-.weeks .wk { flex: 0 0 58px; font-size: 11px; color: var(--text-sub); }
-.weeks .ws { flex: 1; font-size: 14px; }
-.weeks .wd { display: block; font-size: 11px; color: var(--text-sub); line-height: 1.6; margin-top: 1px; }
-.weeks .wc { flex: 0 0 auto; font-size: 11px; color: var(--text-sub); }
-.weeks .wi { color: var(--text-sub); }
-
-/* 割り振りの説明 */
-.howto { padding: 0 20px; margin-top: 44px; }
-.howto .box { background: var(--panel); padding: 20px 18px; }
-.howto .t { font-size: 13px; font-weight: 500; }
-.howto ul { margin-top: 14px; }
-.howto li {
-  display: flex;
-  gap: 14px;
-  font-size: 12px;
-  padding: 8px 0;
-  line-height: 1.7;
-}
-.howto li + li { border-top: 1px solid var(--border); }
-.howto .k { flex: 0 0 76px; color: var(--text-sub); }
-.howto .v { flex: 1; }
-.howto .d { font-size: 11px; color: var(--text-sub); margin-top: 14px; line-height: 1.8; }
-
-/* ================================================
    Switch Lab（下層ページ）
    ================================================ */
 .lab-hero { padding: 0 20px; margin-top: 32px; }
@@ -666,7 +608,7 @@ a { color: inherit; text-decoration: none; }
 /* ================================================
    次のフェーズ：内訳（円グラフ）／あゆみ
    ------------------------------------------------
-   今回の 01〜04 には含みません。
+   今回の 01〜05 には含みません。
    円グラフのグレーは、まだ色を決めていないという意味です。
    ================================================ */
 
