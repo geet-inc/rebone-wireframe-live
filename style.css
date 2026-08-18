@@ -390,17 +390,16 @@ a { color: inherit; text-decoration: none; }
    カレンダー（きろく）
    ------------------------------------------------
    このワイヤーで色を使うのは、この章だけです。
-   部位・種別をあらわす「情報としての色」なので、
+   どこから受けたかをあらわす「情報としての色」なので、
    装飾ではなく、意味を持たせるために置いています。
    ================================================ */
 
 :root {
-  --c-kotsuban:  #d9622c; /* 骨盤 */
-  --c-waki:      #4a9268; /* わき */
-  --c-kata:      #6c86b4; /* 肩 */
-  --c-daitenshi: #8a6aab; /* 大転子 */
-  --c-live:      #23304f; /* ライブレッスン */
-  --c-sw:        #dfa01e; /* Switch Lab */
+  --c-theme: #d9622c; /* 今月のテーマ */
+  --c-ex:    #4a9268; /* エクササイズ集 */
+  --c-live:  #23304f; /* ライブ */
+  --c-lab:   #dfa01e; /* Switch Lab */
+  --c-multi: #8a6aab; /* 複数うけた日 */
 }
 
 /* タブのヘッダー */
@@ -500,24 +499,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
   line-height: 1.2;
   text-align: center;
-  padding: 0 2px;
-}
-/* 2本以上うけた日の、本数バッジ */
-.cal-grid .n {
-  position: absolute;
-  top: -4px;
-  right: -6px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid var(--text-sub);
-  color: var(--text);
-  font-size: 8px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  letter-spacing: 0;
+  padding: 0 1px;
 }
 .cal-grid .is-today { background: var(--panel); }
 .cal-grid .is-today .d { color: var(--text); font-weight: 700; }
@@ -595,15 +578,6 @@ a { color: inherit; text-decoration: none; }
 .chip { text-align: center; }
 .chip .sw { height: 26px; border-radius: 13px; }
 .chip .nm { font-size: 10px; color: var(--text-sub); margin-top: 5px; line-height: 1.5; }
-.chip.is-undef .sw {
-  background: var(--placeholder-bg);
-  border: 1px dashed #c9c9c9;
-  color: var(--placeholder-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-}
 
 /* ---------- シェア ---------- */
 .share-lead { padding: 0 20px; margin-top: 32px; }
@@ -643,8 +617,8 @@ a { color: inherit; text-decoration: none; }
 }
 .share-prev .dl-grid .d { font-size: 8px; color: var(--text-sub); line-height: 1.2; }
 .share-prev .dl-grid .st {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   margin-top: 2px;
   display: flex;
@@ -655,7 +629,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
   line-height: 1.1;
   text-align: center;
-  padding: 0 1px;
+  letter-spacing: 0;
+  padding: 0;
 }
 .share-prev .dl-grid .is-out { visibility: hidden; }
 
