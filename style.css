@@ -662,3 +662,64 @@ a { color: inherit; text-decoration: none; }
 .share-prev .dl-sum p { font-size: 10px; color: var(--text-sub); }
 .share-prev .dl-sum b { font-size: 15px; font-weight: 700; color: var(--text); margin-right: 2px; }
 .share-prev .dl-grid .is-future .d { color: #c8c8c8; }
+
+/* ================================================
+   次のフェーズ：内訳（円グラフ）／あゆみ
+   ------------------------------------------------
+   今回の 01〜04 には含みません。
+   円グラフのグレーは、まだ色を決めていないという意味です。
+   ================================================ */
+
+/* ---------- 見せ方の切りかえ ---------- */
+.pick { padding: 0 20px; margin-top: 24px; display: flex; gap: 8px; }
+.pick span {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+.pick span i { font-size: 11px; }
+.pick span.on { border-color: var(--text); color: var(--text); font-weight: 500; }
+
+/* ---------- 内訳（円グラフ） ---------- */
+.donut { position: relative; display: flex; justify-content: center; margin-top: 14px; }
+.donut .mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.donut .mid b { display: block; font-size: 26px; font-weight: 700; line-height: 1.2; }
+.donut .mid span { font-size: 9px; color: var(--text-sub); }
+
+.brk-legend { margin-top: 16px; display: grid; gap: 6px; }
+.brk-legend li { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-sub); line-height: 1.5; }
+.brk-legend i { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.brk-legend b { margin-left: auto; font-size: 11px; font-weight: 500; color: var(--text); }
+
+.brk-msg { font-size: 12px; line-height: 1.75; text-align: center; margin-top: auto; padding-top: 14px; }
+
+/* ---------- あゆみ ---------- */
+.jsum {
+  margin: 24px 20px 0;
+  background: var(--panel);
+  border-radius: 3px;
+  padding: 18px 0;
+  display: flex;
+}
+.jsum div { flex: 1; text-align: center; }
+.jsum b { display: block; font-size: 22px; font-weight: 700; line-height: 1.3; }
+.jsum span { font-size: 10px; color: var(--text-sub); }
+
+.jgrid { padding: 0 20px; margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.jgrid a { border: 1px solid var(--border); border-radius: 3px; padding: 14px 13px 15px; }
+.jgrid .m { font-size: 15px; font-weight: 500; line-height: 1.5; }
+.jgrid .s { font-size: 11px; color: var(--text-sub); line-height: 1.6; }
+.jgrid .is-now { border-color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }
