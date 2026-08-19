@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=20">
+<link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
 
@@ -19,94 +19,119 @@
     <i class="fa-solid fa-bars"></i>
   </div>
 
+  <!-- 一言メッセージ（閉じるボタンなし。出したら消えずに残ります） -->
+  <div class="msg">
+    <i class="fa-regular fa-comment"></i>
+    <div>
+      <p class="k">Rebone から</p>
+      <p class="body">今月は、反り腰をととのえる月です。むずかしい日は、1本だけでも大丈夫です。</p>
+    </div>
+  </div>
+
   <!-- 今月のテーマ -->
   <div class="theme">
     <p class="kicker">7月のテーマ</p>
     <h2>反り腰を、ととのえる</h2>
     <p class="desc">骨盤の傾きをつくっている、わき・お腹・裏ももを、1ヶ月かけて順に見ていきます。</p>
-    <p class="sub">
-      <b>今週は、わきのスイッチ</b>
-    </p>
   </div>
 
-  <!-- 今日の1本（主役） -->
+  <!-- 今月のライブレッスン（4本） -->
+  <div class="lives">
+    <div class="sec-head">
+      <p class="sec-title">7月のライブレッスン</p>
+      <span class="cnt">全4本</span>
+    </div>
+    <p class="sec-note">今月おこなう4本です。日付が来たものから、受けられるようになります。</p>
+    <ul class="live-list">
+      <li class="is-done">
+        <span class="ph"><i class="fa-regular fa-image"></i></span>
+        <span class="body">
+          <span class="t">背中の力を、ぬく</span>
+          <span class="d">7月2日（水）20:00 ／ Yori</span>
+        </span>
+        <span class="st">アーカイブ</span>
+      </li>
+      <li class="is-next">
+        <span class="ph is-logo">IKUM<br>ロゴ</span>
+        <span class="body">
+          <span class="t">お腹まわりを、ととのえる</span>
+          <span class="d">7月9日（水）20:00 ／ Yori</span>
+        </span>
+        <span class="st">つぎ</span>
+      </li>
+      <li class="is-future">
+        <span class="ph is-logo">IKUM<br>ロゴ</span>
+        <span class="body">
+          <span class="t">裏ももを、のばす</span>
+          <span class="d">7月16日（水）20:00 ／ Yori</span>
+        </span>
+        <span class="st">これから</span>
+      </li>
+      <li class="is-future">
+        <span class="ph is-logo">IKUM<br>ロゴ</span>
+        <span class="body">
+          <span class="t">1ヶ月を、つなげる</span>
+          <span class="d">7月23日（水）20:00 ／ Yori</span>
+        </span>
+        <span class="st">これから</span>
+      </li>
+    </ul>
+    <p class="sec-note" style="margin-top:14px">まだの回は、うすい文字でお出しします。サムネイルは、共通の IKUM ロゴです。回ごとの画像を、そのつどご用意いただく必要はありません。</p>
+    <p class="link-min" style="margin-top:16px">過去のライブレッスンを見る <i class="fa-solid fa-chevron-right chev"></i></p>
+  </div>
+
+  <!-- 今日の1本 -->
   <div class="today">
     <p class="tlead">7月8日（火）／ 今日の1本</p>
     <div class="ph"><i class="fa-regular fa-circle-play"></i><span>レッスン動画</span></div>
-    <h2>肩甲骨とわき</h2>
-    <p class="meta">14分 ／ 今週の ②</p>
+    <h2>肩甲骨まわりを、ひらく</h2>
+    <p class="meta">14分 ／ 肩・背中</p>
     <div class="btn"><i class="fa-solid fa-play"></i>はじめる</div>
-    <p class="note">先週のライブを、1週間に分けてお届けしています。何度くりかえしても、かまいません。</p>
+    <p class="note">曜日にかかわらず、毎日1本お出しします。ライブレッスンのある日も、変わりません。何度くりかえしても、かまいません。</p>
   </div>
 
   <!-- 今週のスケジュール -->
   <div class="sched-wrap">
     <p class="sec-title">今週の、スケジュール</p>
-    <p class="sec-note">月・火・水で3本、木曜に通し、金・土・日でもう一度。</p>
+    <p class="sec-note">エクササイズ集の動画を組んだ、1週間のカリキュラムです。</p>
     <ul class="sched">
       <li class="is-done">
         <span class="day"><b>月</b><span>7</span></span>
-        <span class="num">①</span>
-        <span class="body"><span class="t">わきをほぐす</span><span class="m">12分</span></span>
-        <span class="st"><i class="fa-solid fa-check"></i></span>
+        <span class="body"><span class="t">わきを、ほぐす</span></span>
+        <span class="st">12分</span>
       </li>
       <li class="is-now">
         <span class="day"><b>火</b><span>8</span></span>
-        <span class="num">②</span>
-        <span class="body"><span class="t">肩甲骨とわき</span><span class="m">14分</span></span>
-        <span class="st">今日</span>
+        <span class="body"><span class="t">肩甲骨まわりを、ひらく</span></span>
+        <span class="st">14分</span>
       </li>
       <li>
         <span class="day"><b>水</b><span>9</span></span>
-        <span class="num">③</span>
-        <span class="body"><span class="hidden"></span></span>
-        <span class="st">ライブ 20:00</span>
+        <span class="body"><span class="t">背中の力を、ぬく</span></span>
+        <span class="st">11分</span>
       </li>
       <li>
         <span class="day"><b>木</b><span>10</span></span>
-        <span class="num">通し</span>
-        <span class="body"><span class="hidden"></span></span>
-        <span class="st">約60分</span>
+        <span class="body"><span class="t">お腹の奥を、めざめさせる</span></span>
+        <span class="st">15分</span>
       </li>
       <li>
         <span class="day"><b>金</b><span>11</span></span>
-        <span class="num">①</span>
-        <span class="body"><span class="hidden"></span></span>
-        <span class="st">くりかえし</span>
+        <span class="body"><span class="t">裏ももを、のばす</span></span>
+        <span class="st">13分</span>
       </li>
       <li>
         <span class="day"><b>土</b><span>12</span></span>
-        <span class="num">②</span>
-        <span class="body"><span class="hidden"></span></span>
-        <span class="st">くりかえし</span>
+        <span class="body"><span class="t">全身を、つなげる</span></span>
+        <span class="st">18分</span>
       </li>
       <li>
         <span class="day"><b>日</b><span>13</span></span>
-        <span class="num">③</span>
-        <span class="body"><span class="hidden"></span></span>
-        <span class="st">くりかえし</span>
+        <span class="body"><span class="t">おやすみ</span></span>
+        <span class="st">—</span>
       </li>
     </ul>
-    <p class="sec-note" style="margin-top:14px">見のがした日は、あとからでも受けられます。</p>
-  </div>
-
-  <!-- つぎのライブレッスン -->
-  <div class="sec">
-    <p class="sec-title">つぎのライブレッスン</p>
-    <div class="live">
-      <div class="ph"><i class="fa-regular fa-image"></i></div>
-      <div>
-        <p class="t">お腹まわりを、ととのえる</p>
-        <p class="d">7月9日（水）20:00 ／ Yori</p>
-      </div>
-    </div>
-    <div class="arch">
-      <div>6/17</div>
-      <div>6/24</div>
-      <div>7/2</div>
-      <div>7/9</div>
-    </div>
-    <p class="link-min" style="margin-top:16px">過去のライブレッスンを見る <i class="fa-solid fa-chevron-right chev"></i></p>
+    <p class="sec-note" style="margin-top:14px">1週間の時間割です。ここから動画へは移動しません。その日の分は、上の「今日の1本」から受けられます。</p>
   </div>
 
   <!-- Switch Lab（並走する下地づくり） -->
@@ -119,21 +144,6 @@
       <div class="bar"><span style="width:25%"></span></div>
       <p class="d">身体の使い方の、下地をつくる12回です。今月のテーマと並行して、ご自分のペースで進められます。</p>
       <a href="#" class="btn btn-line">Switch Lab を見る <i class="fa-solid fa-chevron-right chev"></i></a>
-    </div>
-  </div>
-
-  <!-- あなたの積み上げ -->
-  <div class="sec">
-    <p class="sec-title">あなたの積み上げ</p>
-    <div class="stack">
-      <ul>
-        <li><p class="num">12</p><p class="lbl">7月の回数</p></li>
-        <li><p class="num">138</p><p class="lbl">これまでの本数</p></li>
-      </ul>
-      <a href="06-calendar.html" class="more">
-        <span>きろくを見る</span>
-        <span><i class="fa-solid fa-chevron-right chev"></i></span>
-      </a>
     </div>
   </div>
 
