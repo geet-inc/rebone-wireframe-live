@@ -309,3 +309,6 @@ a { color: inherit; text-decoration: none; }
 }
 .now-link i { font-size: 9px; }
 .goal.is-empty .v { color: var(--placeholder-text); }
+
+/* 移れる月がないとき。ボタンは出したまま、うすくして押せなくします */
+.mbtn.is-off { opacity: .3; pointer-events: none; }
