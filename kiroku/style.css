@@ -1,0 +1,311 @@
+/* Rebone ワイヤーフレーム｜コツコツキロクの拡張（内訳・あゆみ） */
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --text-sub: #666666;
+  --border: #e5e5e5;
+  --placeholder-bg: #ededed;
+  --placeholder-text: #999999;
+  --panel: #f6f6f6;
+
+  /* 色を使うのは、カレンダーと内訳の「どこから受けたか」だけです。
+     情報としての色で、デザインの色ではありません。 */
+  --c-theme: #d9622c; /* 今月のテーマ */
+  --c-live:  #23304f; /* リアタイ参加 */
+  --c-arch:  #7d8fb3; /* アーカイブ */
+  --c-ex:    #4a9268; /* エクササイズ集 */
+  --c-lab:   #dfa01e; /* Switch Lab */
+  --c-multi: #8a6aab; /* 複数うけた日 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+
+.screen { max-width: 390px; margin: 0 auto; background: var(--bg); }
+
+.ph {
+  background: var(--placeholder-bg);
+  color: var(--placeholder-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.sec { padding: 0 20px; margin-top: 44px; }
+.sec-btn { margin-top: 12px; }
+.sec-title { font-size: 16px; font-weight: 500; line-height: 1.6; }
+.sec-note { font-size: 12px; color: var(--text-sub); margin-top: 10px; line-height: 1.8; }
+.sec-note.pad { padding: 0 20px; }
+.chev { font-size: 9px; }
+
+/* ---------- ヘッダー（公開中の形） ---------- */
+.head {
+  height: 56px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.head .l { display: flex; align-items: center; gap: 10px; }
+.head .logo { font-size: 15px; font-weight: 700; letter-spacing: .04em; }
+.head .badge { font-size: 10px; background: var(--text); color: #fff; padding: 1px 8px; border-radius: 2px; }
+.head .menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  padding: 3px 12px;
+}
+.head .menu i { font-size: 10px; }
+
+/* ---------- ページタイトル ---------- */
+.ttl { padding: 32px 20px 0; text-align: center; }
+.ttl h1 { font-size: 22px; font-weight: 700; line-height: 1.5; }
+.ttl p { font-size: 12px; color: var(--text-sub); margin-top: 8px; }
+.back { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-sub); margin-bottom: 14px; }
+.back i { font-size: 9px; }
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 52px;
+  margin-top: 16px;
+  background: var(--text);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+.btn i { font-size: 12px; }
+.btn-line { background: transparent; color: var(--text); border: 1px solid var(--text); height: 48px; font-size: 13px; }
+
+/* ---------- 目標／やること ---------- */
+.goals { padding: 28px 20px 0; display: grid; gap: 10px; }
+.goal { background: var(--panel); border-radius: 3px; padding: 14px 16px 16px; }
+.goal .gh { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.goal .k { font-size: 14px; font-weight: 500; }
+.goal .edit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  padding: 2px 11px;
+}
+.goal .edit i { font-size: 9px; }
+.goal .v { font-size: 13px; line-height: 1.7; margin-top: 8px; }
+
+/* ---------- 積み上げ ---------- */
+.stack { display: flex; gap: 30px; margin-top: 14px; background: var(--panel); border-radius: 3px; padding: 20px 20px 18px; }
+.stack .num { font-size: 26px; font-weight: 700; line-height: 1.3; }
+.stack .num small { font-size: 11px; font-weight: 400; margin-left: 3px; }
+.stack .lbl { font-size: 11px; color: var(--text-sub); }
+
+/* ---------- カレンダー ---------- */
+.cal { margin-top: 44px; }
+.cal-m { padding: 0 20px; font-size: 16px; font-weight: 500; }
+.cal-dow { display: grid; grid-template-columns: repeat(7, 1fr); padding: 0 12px; margin-top: 12px; }
+.cal-dow span { text-align: center; font-size: 10px; color: var(--text-sub); padding-bottom: 7px; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); padding: 0 12px; row-gap: 2px; }
+.cal-grid .cell {
+  aspect-ratio: 1 / 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+  border-radius: 3px;
+}
+.cal-grid .d { font-size: 10px; color: var(--text-sub); line-height: 1.3; }
+.cal-grid .stamp {
+  width: 28px;
+  height: 28px;
+  margin-top: 3px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1;
+}
+.cal-grid .is-sel { box-shadow: inset 0 0 0 1px var(--text); }
+.cal-grid .is-sel .d { color: var(--text); font-weight: 700; }
+.cal-grid .is-out .d,
+.cal-grid .is-future .d { color: #c8c8c8; }
+
+.legend { padding: 0 20px; margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; }
+.legend li { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-sub); }
+.legend i { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+/* ---------- 受講したレッスン ---------- */
+.day { font-size: 13px; font-weight: 500; margin-top: 4px; }
+.lessons { margin-top: 10px; }
+.lessons li { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-top: 1px solid var(--border); }
+.lessons li:last-child { border-bottom: 1px solid var(--border); }
+.lessons .ph { flex: 0 0 76px; aspect-ratio: 16 / 10; }
+.lessons .body { flex: 1; min-width: 0; }
+.lessons .t { font-size: 13px; line-height: 1.6; }
+.lessons .m { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-sub); margin-top: 3px; }
+.lessons .chev { color: var(--text-sub); }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+
+/* ---------- 追加するブロック（点線でかこむ） ---------- */
+.add {
+  position: relative;
+  margin: 48px 20px 0;
+  border: 1px dashed #999;
+  border-radius: 3px;
+  padding: 22px 16px 20px;
+}
+.add-tag {
+  position: absolute;
+  top: -11px;
+  left: 12px;
+  background: var(--bg);
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* ---------- 内訳（円グラフ） ---------- */
+.donut { position: relative; display: flex; justify-content: center; margin-top: 18px; }
+.donut .mid { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.donut .mid b { display: block; font-size: 26px; font-weight: 700; line-height: 1.2; }
+.donut .mid span { font-size: 9px; color: var(--text-sub); white-space: nowrap; }
+.brk-legend { margin-top: 18px; display: grid; gap: 7px; }
+.brk-legend li { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-sub); line-height: 1.5; }
+.brk-legend i { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.brk-legend b { margin-left: auto; font-weight: 500; color: var(--text); }
+.brk-msg { font-size: 13px; line-height: 1.75; text-align: center; margin-top: 18px; }
+
+/* ---------- 保存される画像 ---------- */
+.img-lead { padding: 28px 20px 0; }
+.img-lead h1 { font-size: 20px; font-weight: 700; line-height: 1.5; }
+.img-lead p { font-size: 12px; color: var(--text-sub); margin-top: 10px; line-height: 1.85; }
+.img-prev { padding: 0 20px; margin-top: 24px; }
+.img-prev .card {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.img-prev .brand { font-size: 11px; letter-spacing: .06em; font-weight: 700; }
+.img-prev .month { font-size: 13px; font-weight: 500; text-align: center; margin-top: 4px; }
+.img-prev .donut { margin-top: 10px; }
+.img-prev .brk-legend { margin-top: 12px; gap: 4px; }
+.img-prev .brk-legend li { font-size: 11px; }
+.img-prev .brk-msg { font-size: 12px; margin-top: 10px; }
+.img-prev .sum {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+.img-prev .sum p { font-size: 10px; color: var(--text-sub); }
+.img-prev .sum b { font-size: 15px; font-weight: 700; color: var(--text); margin-right: 2px; }
+.img-prev .cap { font-size: 11px; color: var(--text-sub); margin-top: 12px; text-align: center; }
+.img-note { padding: 6px 20px 56px; }
+
+/* ---------- あゆみ ---------- */
+.jsum { margin: 28px 20px 0; background: var(--panel); border-radius: 3px; padding: 18px 0; display: flex; }
+.jsum li { flex: 1; text-align: center; }
+.jsum b { display: block; font-size: 22px; font-weight: 700; line-height: 1.3; }
+.jsum span { font-size: 10px; color: var(--text-sub); }
+.jgrid { padding: 0 20px; margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.jgrid a { border: 1px solid var(--border); border-radius: 3px; padding: 13px 13px 15px; }
+.jgrid .e { font-size: 17px; line-height: 1.4; }
+.jgrid .m { font-size: 15px; font-weight: 500; line-height: 1.5; margin-top: 2px; }
+.jgrid .m small { font-size: 10px; font-weight: 400; color: var(--text-sub); margin-left: 8px; }
+.jgrid .s { font-size: 11px; color: var(--text-sub); line-height: 1.6; }
+.jgrid .is-now { border-color: var(--text); }
+
+/* ---------- フッター（公開中の形） ---------- */
+.site-foot { margin-top: 64px; background: var(--panel); padding: 32px 20px 36px; }
+.site-foot .logo { font-size: 15px; font-weight: 700; letter-spacing: .04em; text-align: center; }
+.site-foot ul { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); display: grid; gap: 6px; }
+.site-foot ul:first-of-type { border-top: 0; padding-top: 0; }
+.site-foot li { font-size: 12px; }
+.site-foot .copy { font-size: 10px; color: var(--text-sub); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+/* ---------- 月の切りかえ（前の月／次の月） ---------- */
+.cal-bar { padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cal-bar .cal-m { padding: 0; }
+.mnav { position: relative; display: flex; gap: 8px; }
+.mbtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 34px;
+  padding: 0 13px;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  font-size: 12px;
+}
+.mbtn i { font-size: 9px; }
+
+/* ---------- カレンダー／内訳のタブ ---------- */
+.tabs { position: relative; margin: 18px 20px 20px; display: flex; gap: 8px; }
+.tabs a {
+  flex: 1;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+.tabs a i { font-size: 11px; }
+.tabs a.on { background: var(--text); border-color: var(--text); color: #fff; font-weight: 500; }
+
+/* ---------- 内訳のパネル ---------- */
+.brk { position: relative; margin: 0 20px; padding: 6px 0 4px; }
+.brk-ttl { font-size: 14px; font-weight: 500; }
+
+/* 追加するところを、点線でかこむ（小さい部品用） */
+.is-add { outline: 1px dashed #999; outline-offset: 7px; border-radius: 1px; }
+.is-add > .add-tag { top: -19px; left: 4px; line-height: 16px; font-size: 10px; padding: 0 6px; }
+.tabs.is-add { margin-top: 30px; }
+.brk.is-add { margin-top: 30px; padding: 10px 6px 8px; }
+.cal-bar { padding-top: 8px; }
+
+/* ---------- 過ぎた月：今月へもどる ---------- */
+.now-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid var(--text);
+  border-radius: 3px;
+  font-size: 12px;
+}
+.now-link i { font-size: 9px; }
+.goal.is-empty .v { color: var(--placeholder-text); }

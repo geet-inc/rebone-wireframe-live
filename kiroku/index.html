@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Rebone 会員サイト ワイヤーフレーム｜コツコツキロクの拡張</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --text-sub: #666666;
+    --border: #e5e5e5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 14px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1400px; margin: 0 auto; padding: 72px 32px 120px; }
+
+  .intro { margin-bottom: 72px; max-width: 640px; }
+  .intro h1 { font-size: 26px; font-weight: 700; line-height: 1.55; }
+  .intro p { font-size: 13px; color: var(--text-sub); margin-top: 18px; }
+  .intro .note { margin-top: 14px; }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px 40px;
+  }
+  .item { width: 390px; }
+  .item .cap { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .item .no { font-size: 11px; color: var(--text-sub); }
+  .item .ttl { font-size: 15px; font-weight: 500; }
+  .item .dsc { font-size: 12px; color: var(--text-sub); margin-bottom: 14px; line-height: 1.7; }
+  .frame {
+    width: 390px;
+    height: 780px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .item .open { display: inline-block; margin-top: 14px; font-size: 12px; color: var(--text-sub); }
+
+  .next { margin-top: 110px; padding-top: 44px; border-top: 1px solid var(--border); }
+  .next .lead { max-width: 640px; margin-bottom: 44px; }
+  .next .lead .tag {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--text-sub);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 3px 9px;
+    margin-bottom: 14px;
+  }
+  .next .lead h2 { font-size: 18px; font-weight: 700; }
+  .next .lead p { font-size: 13px; color: var(--text-sub); margin-top: 12px; }
+
+  .foot { margin-top: 100px; padding-top: 32px; border-top: 1px solid var(--border); }
+  .foot p { font-size: 12px; color: var(--text-sub); }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 40px 20px 80px; }
+    .item, .frame { width: 100%; }
+    .frame { height: 640px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="intro">
+    <h1>Rebone 会員サイト｜ワイヤーフレーム<br>コツコツキロクの拡張（内訳・あゆみ）</h1>
+    <p>公開中の「コツコツキロク」に、「内訳」と「あゆみ」を足すときの骨組みです。公開中の画面は、並びも言葉も変えていません。</p>
+    <p class="note">01・02 の点線でかこんだところが、追加するぶんです。そのほかは、公開中の画面のままです。</p>
+    <p class="note">色を使っているのは、カレンダーと内訳の中だけです。どこから受けたかをあらわすための色で、デザインの色ではありません。</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="item">
+      <div class="cap"><span class="no">01</span><span class="ttl">コツコツキロク（カレンダー）</span></div>
+      <p class="dsc">公開中の画面に、3つを足します。「前の月へのボタン」「カレンダーと内訳のタブ」「あゆみへの入口」です。目標・積み上げ・カレンダー・受講したレッスンは、そのままです。今月では、「次の月」のボタンは出しません。</p>
+      <div class="frame"><iframe src="01-kiroku.html" title="コツコツキロク（カレンダー）"></iframe></div>
+      <a class="open" href="01-kiroku.html">この画面だけを見る <i class="fa-solid fa-chevron-right" style="font-size:9px"></i></a>
+    </div>
+
+    <div class="item">
+      <div class="cap"><span class="no">02</span><span class="ttl">コツコツキロク（内訳）</span></div>
+      <p class="dsc">タブを「内訳」に切りかえた画面です。カレンダーのかわりに、その月の内訳が出ます。分け方は、カレンダーの色とおなじ5つです。内訳を保存するボタンは、このフェーズでは置きません。</p>
+      <div class="frame"><iframe src="02-kiroku-breakdown.html" title="コツコツキロク（内訳）"></iframe></div>
+      <a class="open" href="02-kiroku-breakdown.html">この画面だけを見る <i class="fa-solid fa-chevron-right" style="font-size:9px"></i></a>
+    </div>
+
+    <div class="item">
+      <div class="cap"><span class="no">03</span><span class="ttl">内訳（まだ0本のとき）</span></div>
+      <p class="dsc">月のはじめなど、まだ1本も受けていないときの内訳です。グラフのかわりに、ひとことを出します。</p>
+      <div class="frame"><iframe src="03-kiroku-breakdown-empty.html" title="内訳（まだ0本のとき）"></iframe></div>
+      <a class="open" href="03-kiroku-breakdown-empty.html">この画面だけを見る <i class="fa-solid fa-chevron-right" style="font-size:9px"></i></a>
+    </div>
+
+    <div class="item">
+      <div class="cap"><span class="no">04</span><span class="ttl">あゆみ</span></div>
+      <p class="dsc">月ごとのキロクが、たまっていく場所です。過ぎた月だけがならび、これから先の空いた月は出しません。月をタップすると、その月のコツコツキロクがひらきます。</p>
+      <div class="frame"><iframe src="04-ayumi.html" title="あゆみ"></iframe></div>
+      <a class="open" href="04-ayumi.html">この画面だけを見る <i class="fa-solid fa-chevron-right" style="font-size:9px"></i></a>
+    </div>
+
+    <div class="item">
+      <div class="cap"><span class="no">05</span><span class="ttl">過ぎた月（カレンダー）</span></div>
+      <p class="dsc">「9月」のボタンか、あゆみからひらく画面です。「編集する」のボタンは、ありません。「8月」「10月」のボタンで、前後の月へ移れます。どの月からでも、「今月のキロクへもどる」で1回でもどれます。</p>
+      <div class="frame"><iframe src="05-kiroku-past.html" title="過ぎた月（カレンダー）"></iframe></div>
+      <a class="open" href="05-kiroku-past.html">この画面だけを見る <i class="fa-solid fa-chevron-right" style="font-size:9px"></i></a>
+    </div>
+
+    <div class="item">
+      <div class="cap"><span class="no">06</span><span class="ttl">過ぎた月（内訳）</span></div>
+      <p class="dsc">過ぎた月でも、タブで内訳に切りかえられます。月を移っても、えらんでいるタブはそのままです。</p>
+      <div class="frame"><iframe src="06-kiroku-past-breakdown.html" title="過ぎた月（内訳）"></iframe></div>
+      <a class="open" href="06-kiroku-past-breakdown.html">この画面だけを見る <i class="fa-solid fa-chevron-right" style="font-size:9px"></i></a>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <p>株式会社Geet</p>
+  </div>
+
+</div>
+
+</body>
+</html>
